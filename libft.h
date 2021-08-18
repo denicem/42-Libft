@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/17 17:55:42 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/18 15:50:21 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ size_t ft_strlen(const char *c);
 
 int ft_toupper(int c);
 int ft_tolower(int c);
-//char *ft_strchr(const char *s, int c);
+char *ft_strchr(const char *s, int c);
 //char *ft_strrchr(const char *s, int c);
-//int ft_strncmp(const char *s1, const char *s2);
+int ft_strncmp(const char *s1, const char *s2);
 //void *ft_memchr(const void *s, int c, size_t n);
 //int ft_memcmp(const void *s1, const void *s2);
 //char *ft_strnstr(const char *hazstack, const char *needle, size_t len);
