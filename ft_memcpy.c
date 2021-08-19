@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 17:22:04 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/19 16:37:49 by dmontema         ###   ########.fr       */
+/*   Created: 2021/08/19 17:02:52 by dmontema          #+#    #+#             */
+/*   Updated: 2021/08/19 17:24:09 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-  if (b)
-  {
-    unsigned char *str;
-    unsigned char val;
+  void *og;
 
-    str = b;
-    val = c;
-    while (len)
-    {
-      *str = val;
-      str++;
-      len--;
-    }
-  }
-  return (b);
+  og = dst;
+
+  return (og);
 }
