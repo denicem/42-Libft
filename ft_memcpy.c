@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 17:02:52 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/20 15:16:31 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/20 18:51:54 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,21 @@
 
 void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-  void *og;
+  char *char_dst;
+  char *char_src;
+  size_t i;
 
-  og = dst;
+  char_dst = (char *) dst;
+  char_src = (char *) src;
+  i = 0;
 
-  return (og);
+  while (i < n)
+  {
+    if(char_dst[i] == '\0' || char_src[i] == '\0')
+      break;
+    char_dst[i] = char_src[i];
+    i++;
+  }
+
+  return (dst);
 }
