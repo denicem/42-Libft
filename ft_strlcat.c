@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   strlcat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 17:02:52 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/23 15:46:36 by dmontema         ###   ########.fr       */
+/*   Created: 2021/08/23 17:00:32 by dmontema          #+#    #+#             */
+/*   Updated: 2021/08/23 18:13:18 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-  char *char_dst;
-  char *char_src;
   size_t i;
+  size_t j;
 
-  char_dst = (char *) dst;
-  char_src = (char *) src;
   i = 0;
-
-  while (i < n)
+  j = 0;
+  while (dst[i])
+    i++;
+  while (i < (dstsize - 1))
   {
-    if(char_dst[i] == '\0' || char_src[i] == '\0')
-      break;
-    char_dst[i] = char_src[i];
+    dst[i] = src[j];
+    i++;
+    j++;
+  }
+  dst[i] = '\0';
+  while (src[j] != '\0')
+  {
+    j++;
     i++;
   }
 
-  return (dst);
+  return (i);
 }

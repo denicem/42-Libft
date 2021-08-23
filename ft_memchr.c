@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 17:02:52 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/23 15:46:36 by dmontema         ###   ########.fr       */
+/*   Created: 2021/08/23 19:09:12 by dmontema          #+#    #+#             */
+/*   Updated: 2021/08/23 19:30:52 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-  char *char_dst;
-  char *char_src;
-  size_t i;
+  char *res;
+  int i;
+  unsigned char val;
+  char *char_s;
 
-  char_dst = (char *) dst;
-  char_src = (char *) src;
   i = 0;
-
+  res = NULL;
+  val = (unsigned char) c;
+  char_s = (char *) s;
   while (i < n)
   {
-    if(char_dst[i] == '\0' || char_src[i] == '\0')
+    if (char_s[i] == val)
+    {
+      res = (void *) s+i;
       break;
-    char_dst[i] = char_src[i];
+    }
     i++;
   }
-
-  return (dst);
+  return (res);
 }
