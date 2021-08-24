@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/23 19:32:20 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:48:48 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
-//int ft_memcmp(const void *s1, const void *s2);
-//char *ft_strnstr(const char *haystack, const char *needle, size_t len);
-//int ft_atoi (const char *str);
+int ft_memcmp(const void *s1, const void *s2);
+char *ft_strnstr(const char *haystack, const char *needle, size_t len); //TODO: reduce lines, optimize, not right -> ("42Heilbronn", "bronn", 10)  
+int ft_atoi (const char *str);
 
 #endif
