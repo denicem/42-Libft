@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 15:40:26 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/24 16:39:33 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/25 20:44:48 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     if (haystack[i] == needle[j])
     {
       j++;
-      res = haystack + i;
+      res = (char *) haystack + i;
       while (needle[j])
       {
         if (needle[j] != haystack[i+j] || !haystack[i+j] || (i+j) >= len)
         {
           res = NULL;
-          break;
+          break; 
         }
         j++;
       }
