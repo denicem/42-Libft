@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 13:32:46 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/26 19:38:12 by dmontema         ###   ########.fr       */
+/*   Created: 2021/08/26 18:52:32 by dmontema          #+#    #+#             */
+/*   Updated: 2021/08/26 19:12:56 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c) 
+void    *ft_calloc(size_t count, size_t size)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    return (0);
+    void *res;
+    size_t byte_size;
+
+    byte_size = count * size;
+    res = malloc(byte_size);
+    if (res != NULL)
+        ft_bzero(res, byte_size);
+    return (res);
 }

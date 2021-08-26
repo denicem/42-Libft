@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:17:12 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/20 16:42:25 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/26 20:06:44 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ char  *ft_strchr(const char *s, int c)
     }
     i++;
   }
+  if (s[i] == c)
+    res = (char *) s+i;
+
   return (res);
 }

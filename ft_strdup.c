@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 13:32:46 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/26 19:38:12 by dmontema         ###   ########.fr       */
+/*   Created: 2021/08/26 19:01:16 by dmontema          #+#    #+#             */
+/*   Updated: 2021/08/26 19:26:18 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c) 
+char *ft_strdup(const char *s1)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    return (0);
+    char *res;
+    size_t byte_size;
+
+    byte_size = ft_strlen(s1) + 1;
+    res = malloc(byte_size);
+    if (res != NULL)
+        ft_strlcpy(res, s1, byte_size);
+
+    return (res);
 }
