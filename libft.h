@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/25 19:35:12 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/26 15:35:55 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,21 @@ int ft_memcmp(const void *s1, const void *s2);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len); //TODO: reduce lines, optimize, not right -> ("42Heilbronn", "bronn", 10)  
 int ft_atoi (const char *str); //TODO: set ft_tothepow to static
 
-//void *ft_calloc(size_t count, sizet size);
-//char strdup *strdup(const char *s1);
+//void  *ft_calloc(size_t count, sizet size);
+//char  strdup *strdup(const char *s1);
+
+//char    *ft_substr(char const *s, unsigned int start, size_t len);
+//char    *ft_strjoin(char const *s1, char const *s2);
+//char    *ft_strtrim(char const *s1, char const *s2);
+//char    **ft_split(char const *s, char c);
+//char    *ft_itoa(int n);
+//char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+//char    ft_striteri(char *s, void (*f)(unsigned int, char*));
+//void    ft_putchar_fd(char c, int fd);
+//void    ft_putstr_fd(char *s, int fd);
+//void    ft_putendl_fd(char *s, int fd);
+//void    ft_putnbr_fd(int n, int fd);
+
+
 
 #endif
