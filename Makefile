@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/08/26 19:09:57 by dmontema         ###   ########.fr        #
+#    Updated: 2021/08/27 21:47:46 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,9 @@ LIBC_SRCS	= 	ft_atoi.c		\
 				ft_tolower.c	\
 				ft_toupper.c	\
 				ft_calloc.c		\
-				ft_strdup.c
+				ft_strdup.c		\
+				ft_substr.c		\
+				ft_strjoin.c
 
 LIBC_OBJS	=	$(LIBC_SRCS:.c=.o)
 
@@ -59,3 +61,10 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+main:	main.c
+	$(CC) $(CFLAGS) main.c $(LIBC_SRCS) -o test
+	./test
+
+cleanMain:
+	rm test

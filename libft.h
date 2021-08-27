@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/26 19:11:30 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/27 21:47:49 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ int ft_atoi (const char *str); //TODO: set ft_tothepow to static
 void  *ft_calloc(size_t count, size_t size);
 char  *ft_strdup(const char *s1);
 
-//char    *ft_substr(char const *s, unsigned int start, size_t len);
-//char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_substr(char const *s, unsigned int start, size_t len); //TODO: what if start = 0, malloc protection, start >= ft_strlen(s)
+char    *ft_strjoin(char const *s1, char const *s2);
 //char    *ft_strtrim(char const *s1, char const *s2);
 //char    **ft_split(char const *s, char c);
 //char    *ft_itoa(int n);

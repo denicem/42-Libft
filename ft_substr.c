@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 14:41:13 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/27 21:31:50 by dmontema         ###   ########.fr       */
+/*   Created: 2021/08/27 16:29:55 by dmontema          #+#    #+#             */
+/*   Updated: 2021/08/27 22:05:13 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char * dst, const char * src, size_t dstsize)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-  size_t dst_size;
-  size_t src_size;
-  size_t i;
+    char *res;
+    
+    res = (char *) malloc(len + 1);
+    ft_strlcpy(res, s + start, len + 1);
 
-  dst_size = ft_strlen(dst);
-  src_size = ft_strlen(src);
-  i = 0;
-  if (dstsize > 0)
-  {  
-    while (i < dstsize - 1 && src[i] != '\0')
-    {
-      dst[i] = src[i];
-      i++;
-    }
-    if (dst_size > 0)
-      dst[i] = '\0';
-  } 
-  return (src_size);
+    return (res);
 }
