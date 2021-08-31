@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 17:00:32 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/23 18:13:18 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/28 18:44:23 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,22 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+  size_t res_size;
   size_t i;
   size_t j;
 
-  i = 0;
+  if (!dstsize || !ft_strlen(src))
+    return ft_strlen(dst);
+  res_size = ft_strlen(dst) + ft_strlen(src);
+  i = ft_strlen(dst);
   j = 0;
-  while (dst[i])
-    i++;
-  while (i < (dstsize - 1))
+  while (i < (dstsize - 1) && src[j])
   {
     dst[i] = src[j];
     i++;
     j++;
   }
   dst[i] = '\0';
-  while (src[j] != '\0')
-  {
-    j++;
-    i++;
-  }
 
-  return (i);
+  return (res_size);
 }

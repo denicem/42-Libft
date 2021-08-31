@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 19:09:12 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/25 20:05:33 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/28 20:51:06 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void *ft_memchr(const void *s, int c, size_t n)
 {
   char *res;
   size_t i;
-  unsigned char val;
+  char val;
   char *char_s;
 
   i = 0;
   res = NULL;
-  val = (unsigned char) c;
+  val = (char) c;
   char_s = (char *) s;
   while (i < n)
   {

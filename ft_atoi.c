@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 16:49:04 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/24 19:18:44 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/31 18:42:52 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,12 @@ int ft_atoi(const char *str)
   str_len = ft_strlen(str);
   while (str[i])
   {
+    if (str[i] == (char) 27 || (str[i] >= (char) 9 && str[i] <= (char) 13))
+    {
+      if (i >= str_len)
+        break;
+      continue;
+    }
     if (!ft_isdigit(str[i]))
       return 0;
     res = res + ft_tothepow(10, str_len-i-1) * (ft_isdigit(str[i]) - 48);

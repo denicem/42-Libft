@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 21:32:59 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/27 22:10:05 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/28 18:54:06 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ char *ft_strjoin(char const *s1, char const *s2)
     res_size = ft_strlen(s1) + ft_strlen(s2);
     res = (char *) malloc(res_size + 1);
     //i = 0;
-    if (res_size)
+    if (res)
     {
         ft_strlcpy(res, s1, ft_strlen(s1));
-        ft_strlcat(res, s2, ft_strlen(res) + ft_strlen(s2));
+        ft_strlcat(res, s2, sizeof(char) * res_size);
     }
 
     /*while (s1)

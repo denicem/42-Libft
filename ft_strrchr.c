@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 16:30:40 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/26 20:15:28 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/08/30 12:06:02 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,11 @@ char *ft_strrchr(const char *s, int c)
   int i;
   int s_size;
 
-  
-
   res = NULL;
   i = 0;
-  s_size = ft_strlen(s);
-  while (s[i] > s_size)
+  s_size = ft_strlen(s) + 1;
+  while (i < s_size)
   {
-    if (!s[s_size - 1 - i])
-      break;
     if (s[s_size - 1 - i] == c)
     {
       res = (char *) s + s_size - 1 - i;
@@ -34,8 +30,6 @@ char *ft_strrchr(const char *s, int c)
     }
     i++;
   }
-  if (s[s_size - 1 - i] == c)
-    res = (char *) s + s_size - 1 - i;
 
   return (res);
 }

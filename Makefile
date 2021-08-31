@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/08/27 21:47:46 by dmontema         ###   ########.fr        #
+#    Updated: 2021/08/30 19:58:43 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ LIBC_SRCS	= 	ft_atoi.c		\
 				ft_calloc.c		\
 				ft_strdup.c		\
 				ft_substr.c		\
-				ft_strjoin.c
+				ft_strjoin.c 	
 
 LIBC_OBJS	=	$(LIBC_SRCS:.c=.o)
 
