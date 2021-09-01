@@ -6,15 +6,17 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/27 21:47:49 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/01 17:52:07 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
 
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <limits.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -35,7 +37,7 @@ char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
-int ft_memcmp(const void *s1, const void *s2);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len); //TODO: reduce lines, optimize, not right -> ("42Heilbronn", "bronn", 10)  
 int ft_atoi (const char *str); //TODO: set ft_tothepow to static
 

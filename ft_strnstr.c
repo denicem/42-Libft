@@ -6,13 +6,13 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 15:40:26 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/31 17:54:55 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/01 20:46:56 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_help(const char *hay, const char *nee, size_t restLen)
+static char *ft_help(const char *hay, const char *nee, size_t restLen)
 {
   char *res;
   size_t i;

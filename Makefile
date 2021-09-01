@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/08/30 19:58:43 by dmontema         ###   ########.fr        #
+#    Updated: 2021/09/01 15:22:28 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ fclean: clean
 re: fclean all
 
 main:	main.c
+	clear
 	$(CC) $(CFLAGS) main.c $(LIBC_SRCS) -o test
 	./test
 

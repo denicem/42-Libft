@@ -6,53 +6,49 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 16:49:04 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/31 18:42:52 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/01 17:23:17 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tothepow(int x, int y)
-{
-  int res;
-  int i;
-
-  if (!y)
-    return 1;
-
-  res = x;
-  i = 0;
-  while (i < (y-1))
-  {
-    res = res * x;
-    i++;
-  }
-
-  return (res);
-}
-
 int ft_atoi(const char *str)
 {
   int res;
-  int i;
-  int str_len;
+  int sign;
 
-  i = 0;
+  if (!ft_strlen(str))
+    return (0);
+
   res = 0;
-  str_len = ft_strlen(str);
-  while (str[i])
+  sign = 1;
+  
+  while (*str == ' ' || (*str >= '\b' && *str <= '\r') || *str == '-' || *str == '+')
   {
-    if (str[i] == (char) 27 || (str[i] >= (char) 9 && str[i] <= (char) 13))
+    if (*str == '-' || *str == '+' || ft_isdigit(*str))
     {
-      if (i >= str_len)
-        break;
-      continue;
+      if (*str == '-' || *str == '+')
+      {
+        if (*str == '-')
+          sign = -1;
+        str++;
+      }
+      break;
     }
-    if (!ft_isdigit(str[i]))
-      return 0;
-    res = res + ft_tothepow(10, str_len-i-1) * (ft_isdigit(str[i]) - 48);
-    i++;
+    str++;
   }
   
-  return (res);
+  while (ft_isdigit(*str))
+  {
+    if (!ft_isdigit(*str))
+      break;
+    res = res * 10 + (ft_isdigit(*str) - '0');
+    if (sign == -1 && res >= INT_MAX)
+      return (INT_MIN);
+    else if (res >= INT_MAX)
+      return (INT_MAX); 
+    str++;
+  }
+  
+  return (res * sign);
 }

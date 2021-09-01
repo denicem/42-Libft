@@ -6,30 +6,39 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:58:46 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/24 15:29:09 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/01 18:47:05 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-  char *char_s1;
-  char *char_s2;
-  int i;
+  unsigned char *char_s1;
+  unsigned char *char_s2;
+  size_t i;
 
-  char_s1 = (char *) s1;
-  char_s2 = (char *) s2;
+  char_s1 = (unsigned char *) s1;
+  char_s2 = (unsigned char *) s2;
   i = 0;
 
-  while (char_s1[i] != '\0' || char_s2[i] != '\0')
-  {
-    if (char_s1[i] > char_s2[i])
-      return (1);
-    else if (char_s1[i] < char_s2[i])
-      return (-1);
+  if (!n)
+    return (0);
+  while (i < n - 1 && char_s1[i] == char_s2[i])
     i++;
-  }
 
-  return (0);
+  return (char_s1[i] - char_s2[i]);
+
+  // unsigned char	*s1c;
+	// unsigned char	*s2c;
+	// size_t			i;
+
+	// i = -1;
+	// s1c = (unsigned char *)s1;
+	// s2c = (unsigned char *)s2;
+	// while (++i < n && *(s1c + i) == *(s2c + i))
+	// 	;
+	// if (i == n)
+	// 	return (0);
+	// return (*(s1c + i) - *(s2c + i));
 }
