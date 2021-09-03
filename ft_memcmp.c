@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:58:46 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/01 18:47:05 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/02 15:51:15 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,4 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     i++;
 
   return (char_s1[i] - char_s2[i]);
-
-  // unsigned char	*s1c;
-	// unsigned char	*s2c;
-	// size_t			i;
-
-	// i = -1;
-	// s1c = (unsigned char *)s1;
-	// s2c = (unsigned char *)s2;
-	// while (++i < n && *(s1c + i) == *(s2c + i))
-	// 	;
-	// if (i == n)
-	// 	return (0);
-	// return (*(s1c + i) - *(s2c + i));
 }
