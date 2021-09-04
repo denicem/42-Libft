@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/03 14:34:31 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/03 21:22:05 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <string.h>
 #include <limits.h>
 
@@ -44,16 +45,16 @@ int ft_atoi (const char *str); //TODO: set ft_tothepow to static
 void  *ft_calloc(size_t count, size_t size);
 char  *ft_strdup(const char *s1);
 
-char    *ft_substr(char const *s, unsigned int start, size_t len); //TODO: what if start = 0, malloc protection, start >= ft_strlen(s)
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 //char    *ft_strtrim(char const *s1, char const *s2);
 //char    **ft_split(char const *s, char c);
-char    *ft_itoa(int n);
+char    *ft_itoa(int n); //TODO: optimize, because too complicated!
 //char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //char    ft_striteri(char *s, void (*f)(unsigned int, char*));
-//void    ft_putchar_fd(char c, int fd);
-//void    ft_putstr_fd(char *s, int fd);
-//void    ft_putendl_fd(char *s, int fd);
-//void    ft_putnbr_fd(int n, int fd);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd); //TODO: find another solution for INT_MIN (if possible)
 
 #endif
