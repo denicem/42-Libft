@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/09/03 21:18:49 by dmontema         ###   ########.fr        #
+#    Updated: 2021/09/04 19:07:30 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,10 @@ LIBC_SRCS	= 	ft_atoi.c		\
 				ft_putchar_fd.c	\
 				ft_putstr_fd.c	\
 				ft_putendl_fd.c	\
-				ft_putnbr_fd.c 
+				ft_putnbr_fd.c 	\
+				ft_striteri.c	\
+				ft_strmapi.c	\
+				ft_strtrim.c
 
 LIBC_OBJS	=	$(LIBC_SRCS:.c=.o)
 
