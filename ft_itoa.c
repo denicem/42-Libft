@@ -6,13 +6,13 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:38:14 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/03 18:54:00 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:41:34 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_countByte(int n)
+static int	ft_countByte(int n)
 {
 	int	res;
 

@@ -6,16 +6,14 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:58:35 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/19 16:35:38 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:35:06 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t len)
+void	ft_bzero(void *s, size_t len)
 {
-  if (len)
-  {
-    ft_memset(s, 0, len);
-  }
+	if (len)
+		ft_memset(s, 0, len);
 }

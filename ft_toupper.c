@@ -6,15 +6,15 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 16:14:01 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/17 16:19:39 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:58:46 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-  if(c >= 97 && c <= 122)
-    c = 65 + c - 97;
-  return c;
+	if (c >= 97 && c <= 122)
+		c = 65 + c - 97;
+	return (c);
 }

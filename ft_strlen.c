@@ -6,15 +6,15 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 14:12:03 by dmontema          #+#    #+#             */
-/*   Updated: 2021/08/17 14:14:05 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:52:03 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *c)
+size_t	ft_strlen(const char *c)
 {
-  int res;
+	int	res;
 
 	res = 0;
 	while (c[res] != '\0')

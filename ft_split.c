@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:16:10 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/08 18:44:17 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:35:36 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,10 @@ static int	ft_getArrSize(char const *s, char c)
 		while (*s != c && *s != '\0')
 			s++;
 		res++;
+		if (*s == '\0')
+			break ;
 		while (*s == c)
 			s++;
-		s++;
 	}
 	return (res);
 }
@@ -72,11 +73,11 @@ char	**ft_split(char const *s, char c)
 {
 	char	**res;
 
-	if (c == '\0' || s == NULL)
+	if (s == NULL)
 		return (NULL);
-	while (*s == c)
+	while (*s == c && *s != '\0')
 		s++;
-	res = (char **) malloc(sizeof(char *) * ft_getArrSize(s, c) + 1);
+	res = (char **) malloc(sizeof(char *) * ft_getArrSize(s, c));
 	if (res == NULL)
 		return (NULL);
 	if (!ft_insertStr(s, c, res))

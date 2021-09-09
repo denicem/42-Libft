@@ -6,43 +6,42 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:20:03 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/02 16:41:45 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:48:03 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *ft_rev_memmove(char *dst, const char *src, size_t len)
+static char	*ft_rev_memmove(char *dst, const char *src, size_t len)
 {
-  while (len)
-  {
-    *(dst + len - 1) = *(src + len - 1); 
-    len--;
-  }
-
-  return (dst);
+	while (len)
+	{
+		*(dst + len - 1) = *(src + len - 1);
+		len--;
+	}
+	return (dst);
 }
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-  char *char_dst;
-  char *char_src;
-  size_t i;
+	char	*char_dst;
+	char	*char_src;
+	size_t	i;
 
-  char_dst = (char *) dst;
-  char_src = (char *) src;
-
-  if (dst > src)
-    ft_rev_memmove(char_dst, char_src, len);
-  else
-  {
-    i = 0;
-    while (i < len)
-    {
-      char_dst[i] = char_src[i];
-      i++;
-    }  
-  }
-
-  return (dst);
+	if (src == NULL && dst == NULL)
+		return (NULL);
+	char_dst = (char *) dst;
+	char_src = (char *) src;
+	if (dst > src)
+		ft_rev_memmove(char_dst, char_src, len);
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			char_dst[i] = char_src[i];
+			i++;
+		}
+	}
+	return (dst);
 }
