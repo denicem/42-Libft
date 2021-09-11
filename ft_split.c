@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:16:10 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/09 19:35:36 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/11 21:29:31 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s == c && *s != '\0')
 		s++;
-	res = (char **) malloc(sizeof(char *) * ft_getArrSize(s, c));
+	res = (char **) malloc(sizeof(char *) * ft_getArrSize(s, c) + 1);
 	if (res == NULL)
 		return (NULL);
 	if (!ft_insertStr(s, c, res))
