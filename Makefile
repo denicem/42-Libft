@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/09/11 17:03:05 by dmontema         ###   ########.fr        #
+#    Updated: 2021/09/12 16:17:49 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ LIBC_SRCS	= 	ft_atoi.c		\
 				ft_lstadd_back.c \
 				ft_lstdelone.c	\
 				ft_lstiter.c	\
-				ft_lstclear.c
+				ft_lstclear.c	\
+				ft_lstmap.c
 
 LIBC_OBJS	=	$(LIBC_SRCS:.c=.o)
 
