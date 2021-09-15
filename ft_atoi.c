@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+static void	ft_skipSpaces(const char *str)
+{
+	while (*str == ' ' || (*str >= '\b' && *str <= '\r'))
+		str++;
+}
+
 int	ft_atoi(const char *str)
 {
 	int	res;
