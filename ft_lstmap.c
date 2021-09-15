@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 22:19:23 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/12 17:41:58 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/15 19:35:04 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
-	res = (t_list *) malloc(ft_lstsize(lst) + 1);
+	res = ft_lstnew(f(lst->content));
 	if (res == NULL)
 		return (NULL);
 	lst_cpy = lst;

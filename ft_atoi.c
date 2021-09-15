@@ -6,17 +6,23 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 16:49:04 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/09 20:59:43 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/15 19:30:07 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_skipSpaces(const char *str)
-{
-	while (*str == ' ' || (*str >= '\b' && *str <= '\r'))
-		str++;
-}
+// static void	ft_skipSpaces(const char *str)
+// {
+// 	while (*str == ' ' || (*str >= '\b' && *str <= '\r'))
+// 		str++;
+// }
+
+// static int	ft_isWhitespace(char c)
+// {
+// 	if (c == ' ' || (*str >= '\b' && *str <= '\r'))
+		
+// }
 
 int	ft_atoi(const char *str)
 {

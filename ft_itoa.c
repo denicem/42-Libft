@@ -6,16 +6,38 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:38:14 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/09 20:41:34 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/15 18:47:44 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countByte(int n)
+static void	ft_insertStr(char *res, int n, int i, int res_len)
+{
+	if (n == INT_MIN)
+	{
+		res[0] = '-';
+		res[1] = '2';
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		res[i] = '-';
+		n *= -1;
+	}
+	if (n > 9)
+		ft_insertStr(res, n / 10, i + 1, res_len);
+	res[res_len - 1 - i] = '0' + (n % 10);
+}
+
+static int	ft_countStrLen(int n)
 {
 	int	res;
 
+	if (n == INT_MIN)
+		return (11);
+	if (n == 0)
+		return (1);
 	res = 0;
 	if (n < 0)
 	{
@@ -32,28 +54,14 @@ static int	ft_countByte(int n)
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	char	*res;
 	int		res_len;
+	char	*res;
 
-	i = 0;
-	res_len = ft_countByte(n) + 1;
-	res = malloc(res_len);
+	res_len = ft_countStrLen(n);
+	res = (char *) malloc(res_len + 1);
 	if (res == NULL)
 		return (NULL);
-	if (n < 0)
-	{
-		res[i] = '-';
-		n *= -1;
-	}
-	i++;
-	while (n)
-	{
-		res[res_len - 1 - i] = '0' + (n % 10);
-		n /= 10;
-		if (i < res_len - 1)
-			i++;
-	}
-	res[i] = '\0';
+	ft_insertStr(res, n, 0, res_len);
+	res[res_len] = '\0';
 	return (res);
 }
