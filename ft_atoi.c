@@ -6,23 +6,35 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 16:49:04 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/15 19:30:07 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/16 19:51:34 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// static void	ft_skipSpaces(const char *str)
-// {
-// 	while (*str == ' ' || (*str >= '\b' && *str <= '\r'))
-// 		str++;
-// }
+static int	ft_isWhitespace(char c)
+{
+	if (c == ' ' || (c >= '\b' && c <= '\r'))
+		return (1);
+	return (0);
+}
 
-// static int	ft_isWhitespace(char c)
-// {
-// 	if (c == ' ' || (*str >= '\b' && *str <= '\r'))
-		
-// }
+static int	ft_calcRes(const char *str, int sign)
+{
+	int	res;
+
+	res = 0;
+	while (ft_isdigit(*str))
+	{
+		if (sign == -1 && res >= INT_MAX)
+			return (INT_MIN);
+		else if (res >= INT_MAX)
+			return (INT_MAX);
+		res = res * 10 + (ft_isdigit(*str) - '0');
+		str++;
+	}
+	return (res);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -33,30 +45,14 @@ int	ft_atoi(const char *str)
 		return (0);
 	res = 0;
 	sign = 1;
-	while (*str == ' ' || (*str >= '\b' && *str <= '\r') || *str == '-' || *str == '+')
+	while (ft_isWhitespace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (*str == '-' || *str == '+' || ft_isdigit(*str))
-		{
-			if (*str == '-' || *str == '+')
-			{
-				if (*str == '-')
-					sign = -1;
-				str++;
-			}
-			break ;
-		}
+		if (*str == '-')
+			sign = -1;
 		str++;
 	}
-	while (ft_isdigit(*str))
-	{
-		if (!ft_isdigit(*str))
-			break ;
-		res = res * 10 + (ft_isdigit(*str) - '0');
-		if (sign == -1 && res >= INT_MAX)
-			return (INT_MIN);
-		else if (res >= INT_MAX)
-			return (INT_MAX);
-		str++;
-	}
+	res = ft_calcRes(str, sign);
 	return (res * sign);
 }
