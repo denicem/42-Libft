@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 18:34:12 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/10 18:47:33 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:14:01 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int res;
+	int	res;
 
 	res = 0;
 	while (lst != NULL)
@@ -22,6 +22,5 @@ int	ft_lstsize(t_list *lst)
 		res++;
 		lst = lst->next;
 	}
-
 	return (res);
 }

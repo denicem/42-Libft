@@ -6,52 +6,51 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:16:10 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/16 22:32:51 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/17 17:26:13 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_freeMem(char **res, int pos)
+static int	freeMem(char **arr, int pos)
 {
 	while (pos >= 0)
 	{
-		free(res[pos]);
+		free(arr[pos]);
 		pos--;
 	}
-	free(res);
+	free(arr);
+	return (0);
 }
 
-static int	ft_insertStr(char const *s, char c, char **res)
+static int	ft_insArr(const char *s, char c, char **res)
 {
 	int	str_len;
-	int	i;
+	int	arr_pos;
+	int	s_pos;
 
-	i = 0;
-	while (*s != '\0')
+	arr_pos = 0;
+	s_pos = 0;
+	while (s[s_pos] != '\0')
 	{
 		str_len = 0;
-		while (*s != c && *s != '\0')
+		while (s[s_pos] != c && s[s_pos] != '\0')
 		{
+			s_pos++;
 			str_len++;
-			s++;
 		}
-		res[i] = (char *) malloc(sizeof(char) * str_len + 1);
-		if (res[i] == NULL)
-		{
-			ft_freeMem(res, i);
-			return (0);
-		}
-		ft_strlcpy(res[i], s - str_len, str_len + 1);
-		i++;
-		while (*s == c && *s != '\0')
-			s++;
+		res[arr_pos] = ft_substr(s, s_pos - str_len, str_len);
+		if (res == NULL)
+			return (freeMem(res, arr_pos));
+		while (s[s_pos] == c && s[s_pos] != '\0')
+			s_pos++;
+		arr_pos++;
 	}
-	res[i] = 0;
+	res[arr_pos] = 0;
 	return (1);
 }
 
-static int	ft_getArrSize(char const *s, char c)
+static int	ft_getArrSize(const char *s, char c)
 {
 	int	res;
 
@@ -61,8 +60,6 @@ static int	ft_getArrSize(char const *s, char c)
 		while (*s != c && *s != '\0')
 			s++;
 		res++;
-		if (*s == '\0')
-			break ;
 		while (*s == c && *s != '\0')
 			s++;
 	}
@@ -77,10 +74,20 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s == c && *s != '\0')
 		s++;
-	res = malloc(sizeof(char *) * ft_getArrSize(s, c));
+	if (*s == '\0')
+	{
+		res = malloc (sizeof(char *));
+		res[0] = NULL;
+		return (res);
+	}
+	res = malloc(sizeof(char *) * (ft_getArrSize(s, c) + 1));
 	if (res == NULL)
 		return (NULL);
-	if (!ft_insertStr(s, c, res))
-		return (NULL);
+	if (!ft_insArr(s, c, res))
+	{
+		res = malloc (sizeof(char *));
+		res[0] = NULL;
+		return (res);
+	}
 	return (res);
 }
