@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 16:17:06 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/17 20:12:53 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/17 21:45:17 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*next;
 
-	if (lst != NULL)
+	if (lst != NULL || del != NULL)
 	{
 		current = *lst;
 		next = NULL;
