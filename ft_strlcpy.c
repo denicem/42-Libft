@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 14:41:13 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/09 20:51:44 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/18 17:26:44 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dst_size;
 	size_t	src_size;
 	size_t	i;
 
-	dst_size = ft_strlen(dst);
 	src_size = ft_strlen(src);
 	i = 0;
 	if (dstsize > 0)
@@ -28,8 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			dst[i] = src[i];
 			i++;
 		}
-		if (dst_size > 0)
-			dst[i] = '\0';
+		dst[i] = '\0';
 	}
 	return (src_size);
 }
