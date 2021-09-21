@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:16:10 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/17 17:26:13 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/09/21 14:19:31 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char	**ft_split(char const *s, char c)
 	if (*s == '\0')
 	{
 		res = malloc (sizeof(char *));
+		if (res == NULL)
+			return (NULL);
 		res[0] = NULL;
 		return (res);
 	}
