@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 16:29:55 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/21 15:40:38 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/10/29 20:23:06 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_calloc(1, 1));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	res = (char *) malloc(len + 1);
 	if (res == NULL)
 		return (NULL);
