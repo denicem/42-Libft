@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 17:02:52 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/20 20:44:07 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/03 20:57:07 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../inc/libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

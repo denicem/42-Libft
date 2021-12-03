@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:20:03 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/09 20:48:03 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/03 20:57:07 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../inc/libft.h"
 
 static char	*ft_rev_memmove(char *dst, const char *src, size_t len)
 {

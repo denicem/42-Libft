@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:32:13 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/17 16:39:27 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/03 20:58:34 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "inc/libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>

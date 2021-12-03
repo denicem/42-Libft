@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 18:13:32 by dmontema          #+#    #+#             */
-/*   Updated: 2021/09/17 15:04:21 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/03 20:57:07 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../inc/libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
