@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 16:17:06 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/03 20:57:07 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/04 22:04:03 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../../inc/list.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
