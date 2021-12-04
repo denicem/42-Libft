@@ -1,31 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   stdio.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 21:16:26 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 22:14:52 by dmontema         ###   ########.fr       */
+/*   Created: 2021/12/04 22:13:45 by dmontema          #+#    #+#             */
+/*   Updated: 2021/12/04 22:14:33 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/stdio.h"
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (n == -2147483648)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putchar_fd('2', fd);
-		n = 147483648;
-	}
-	if (n < 0)
-	{
-		n = -n;
-		ft_putchar_fd('-', fd);
-	}
-	if (n > 9)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd(n % 10 + 48, fd);
-}
+// stdio TODO: add ft_printf, gnl and add the normal put funcs (e.g putchar, ...)
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);

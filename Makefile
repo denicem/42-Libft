@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/12/04 22:08:18 by dmontema         ###   ########.fr        #
+#    Updated: 2021/12/04 22:19:33 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ HEADERFILES	=	./libft.h
 
 SRC_DIR		:=	src
 CTYPE_DIR	:=	$(SRC_DIR)/ctype
+STDIO_DIR	:=	$(SRC_DIR)/stdio
 STDLIB_DIR	:=	$(SRC_DIR)/stdlib
 STRING_DIR	:=	$(SRC_DIR)/string
 LIST_DIR	:=	$(SRC_DIR)/list
@@ -29,6 +30,11 @@ CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 				$(CTYPE_DIR)/ft_isupper.c \
 				$(CTYPE_DIR)/ft_tolower.c \
 				$(CTYPE_DIR)/ft_toupper.c
+
+STDIO_SRCS	:=	$(STDIO_DIR)/ft_putchar_fd.c \
+				$(STDIO_DIR)/ft_putstr_fd.c \
+				$(STDIO_DIR)/ft_putendl_fd.c \
+				$(STDIO_DIR)/ft_putnbr_fd.c \
 
 STDLIB_SRCS	:=	$(STDLIB_DIR)/ft_calloc.c \
 				$(STDLIB_DIR)/ft_atoi.c 
@@ -65,43 +71,13 @@ LIST_SRCS	=	$(LIST_DIR)/ft_lstnew.c \
 				$(LIST_DIR)/ft_lstdelone.c \
 				$(LIST_DIR)/ft_lstclear.c \
 
-LIBC_SRCS	=	ft_atoi.c		\
-				ft_bzero.c 		\
-				ft_isalnum.c	\
-				ft_isalpha.c	\
-				ft_isascii.c	\
-				ft_isdigit.c	\
-				ft_isprint.c	\
-				ft_memchr.c		\
-				ft_memcmp.c		\
-				ft_memcpy.c		\
-				ft_memmove.c	\
-				ft_memset.c		\
-				ft_strchr.c		\
-				ft_strlcat.c	\
-				ft_strlcpy.c	\
-				ft_strlen.c		\
-				ft_strncmp.c	\
-				ft_strnstr.c	\
-				ft_strrchr.c	\
-				ft_tolower.c	\
-				ft_toupper.c	\
-				ft_calloc.c		\
-				ft_strdup.c		\
-				ft_substr.c		\
-				ft_strjoin.c 	\
-				ft_itoa.c		\
-				ft_putchar_fd.c	\
-				ft_putstr_fd.c	\
-				ft_putendl_fd.c	\
-				ft_putnbr_fd.c 	\
-				ft_striteri.c	\
-				ft_strmapi.c	\
-				ft_strtrim.c	\
-				ft_split.c
+LIBFT_SRCS	=	CTYPE_SRCS \
+				STDIO_SRCS \
+				STDLIB_SRCS \
+				STRING_SRCS \
+				LIST_SRCS
 
-LIBC_OBJS	=	$(LIBC_SRCS:.c=.o)
-
+LIBFT_OBJS	=	$(LIBFT_SRCS:.c=.o)
 
 CC 			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
@@ -109,17 +85,14 @@ AR			=	ar rc
 
 all:	$(NAME)
 
-$(NAME): $(LIBC_OBJS)
-	$(AR) $(NAME) $(LIBC_OBJS)
-
-bonus: $(NAME) $(BONUS_OBJS)
-	$(AR) $(NAME) $(BONUS_OBJS)
+$(NAME): $(LIBFT_OBJS)
+	$(AR) $(NAME) $(LIBFT_OBJS)
 
 .c.o:	
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-	rm -f $(LIBC_OBJS) $(BONUS_OBJS)
+	rm -f $(LIBC_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
