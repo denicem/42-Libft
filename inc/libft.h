@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 17:27:16 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:34:35 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-//stdlib TODO: put to seperate header; ft_itoa not sure if it belongs there, maybe to a different folder called additional_funcs?
-void	*ft_calloc(size_t count, size_t size);
-int		ft_atoi(const char *str);
-char	*ft_itoa(int n);
-
+# include "stdlib.h"
 
 // str TODO: put to seperate header; mark the funcs that don't belong originally to this lib
 void	*ft_memset(void *b, int c, size_t len);
@@ -54,6 +50,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
 
 // list TODO: put to seperate header
 typedef struct s_list
