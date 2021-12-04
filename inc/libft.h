@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:31:48 by dmontema          #+#    #+#             */
-/*   Updated: 2021/11/20 01:40:02 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/04 17:27:16 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,7 @@
 # include	<string.h>
 # include	<limits.h>
 
-// ctype TODO: put to seperate header; add isupper, islower, isspace.
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_isascii(int c);
+# include "ctype.h"
 
 // stdio TODO: put to seperate header; add ft_printf, gnl and add the normal put funcs (e.g putchar, ...)
 void	ft_putchar_fd(char c, int fd);

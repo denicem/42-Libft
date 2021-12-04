@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ctype.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 16:14:01 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 17:57:10 by dmontema         ###   ########.fr       */
+/*   Created: 2021/12/04 17:14:21 by dmontema          #+#    #+#             */
+/*   Updated: 2021/12/04 17:57:50 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
-
-int	ft_toupper(int c)
-{
-	if (ft_islower(c))
-		c = 'A' + c - 'a';
-	return (c);
-}
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isprint(int c);
+int	ft_isascii(int c);
+int	ft_isspace(int c);
+int	ft_islower(int c);
+int	ft_isupper(int c);
+int	ft_tolower(int c);
+int	ft_toupper(int c);

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 16:14:01 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 17:57:10 by dmontema         ###   ########.fr       */
+/*   Created: 2021/12/04 17:54:54 by dmontema          #+#    #+#             */
+/*   Updated: 2021/12/04 17:55:47 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../../inc/ctype.h"
 
-int	ft_toupper(int c)
+int	ft_isupper(int c)
 {
-	if (ft_islower(c))
-		c = 'A' + c - 'a';
-	return (c);
+	if (c >= 'A' && c <= 'Z')
+		return (c);
+	return (0);
 }

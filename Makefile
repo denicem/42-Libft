@@ -6,13 +6,26 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/09/17 22:42:25 by dmontema         ###   ########.fr        #
+#    Updated: 2021/12/04 18:03:53 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 HEADERFILES	=	./libft.h
 
+SRC_DIR		:=	src
+CTYPE_DIR	:=	$(SRC_DIR)/ctype
+
+CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
+				$(CTYPE_DIR)/ft_isdigit.c \
+				$(CTYPE_DIR)/ft_isalnum.c \
+				$(CTYPE_DIR)/ft_isprint.c \
+				$(CTYPE_DIR)/ft_isascii.c \
+				$(CTYPE_DIR)/ft_isspace.c \
+				$(CTYPE_DIR)/ft_islower.c \
+				$(CTYPE_DIR)/ft_isupper.c \
+				$(CTYPE_DIR)/ft_tolower.c \
+				$(CTYPE_DIR)/ft_toupper.c \
 
 LIBC_SRCS	=	ft_atoi.c		\
 				ft_bzero.c 		\
