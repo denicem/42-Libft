@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/12/04 18:03:53 by dmontema         ###   ########.fr        #
+#    Updated: 2021/12/04 19:49:44 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ HEADERFILES	=	./libft.h
 
 SRC_DIR		:=	src
 CTYPE_DIR	:=	$(SRC_DIR)/ctype
+STDLIB_DIR	:=	$(SRC_DIR)/stdlib
 
 CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 				$(CTYPE_DIR)/ft_isdigit.c \
@@ -25,7 +26,10 @@ CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 				$(CTYPE_DIR)/ft_islower.c \
 				$(CTYPE_DIR)/ft_isupper.c \
 				$(CTYPE_DIR)/ft_tolower.c \
-				$(CTYPE_DIR)/ft_toupper.c \
+				$(CTYPE_DIR)/ft_toupper.c
+
+STDLIB_SRCS	:=	$(STDLIB_DIR)/ft_calloc.c \
+				$(STDLIB_DIR)/ft_atoi.c 
 
 LIBC_SRCS	=	ft_atoi.c		\
 				ft_bzero.c 		\

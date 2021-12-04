@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 18:52:32 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/03 20:57:07 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:40:06 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../../inc/stdlib.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
