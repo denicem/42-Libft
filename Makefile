@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/12/04 19:49:44 by dmontema         ###   ########.fr        #
+#    Updated: 2021/12/04 20:21:20 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ HEADERFILES	=	./libft.h
 SRC_DIR		:=	src
 CTYPE_DIR	:=	$(SRC_DIR)/ctype
 STDLIB_DIR	:=	$(SRC_DIR)/stdlib
+STRING_DIR		:=	$(SRC_DIR)/string
 
 CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 				$(CTYPE_DIR)/ft_isdigit.c \
@@ -30,6 +31,28 @@ CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 
 STDLIB_SRCS	:=	$(STDLIB_DIR)/ft_calloc.c \
 				$(STDLIB_DIR)/ft_atoi.c 
+
+STRING_SRCS	:=	$(STRING_DIR)/ft_memset.c \
+				$(STRING_DIR)/ft_bzero.c \
+				$(STRING_DIR)/ft_memmove.c \
+				$(STRING_DIR)/ft_memchr.c \
+				$(STRING_DIR)/ft_memcmp.c \
+				$(STRING_DIR)/ft_memcpy.c \
+				$(STRING_DIR)/ft_strlen.c \
+				$(STRING_DIR)/ft_strlcpy.c \
+				$(STRING_DIR)/ft_strlcat.c \
+				$(STRING_DIR)/ft_strchr.c \
+				$(STRING_DIR)/ft_strrchr.c \
+				$(STRING_DIR)/ft_strnstr.c \
+				$(STRING_DIR)/ft_strncmp.c \
+				$(STRING_DIR)/ft_substr.c \
+				$(STRING_DIR)/ft_strjoin.c \
+				$(STRING_DIR)/ft_strtrim.c \
+				$(STRING_DIR)/ft_split.c \
+				$(STRING_DIR)/ft_strdup.c \
+				$(STRING_DIR)/ft_striteri.c \
+				$(STRING_DIR)/ft_strmapi.c \
+				$(STRING_DIR)/ft_itoa.c 
 
 LIBC_SRCS	=	ft_atoi.c		\
 				ft_bzero.c 		\

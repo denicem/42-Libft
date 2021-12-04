@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:38:14 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/03 20:57:07 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/04 20:07:33 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../../inc/string.h"
 
 static void	ft_insertStr(char *res, int n, int i, int res_len)
 {

@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:58:46 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/03 20:57:07 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/04 20:07:33 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../../inc/string.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
