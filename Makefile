@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/12/17 18:38:16 by dmontema         ###   ########.fr        #
+#    Updated: 2021/12/17 19:25:54 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ STDIO_SRCS	:=	$(STDIO_DIR)/ft_putchar_fd.c \
 				$(STDIO_DIR)/ft_putendl_fd.c \
 				$(STDIO_DIR)/ft_putnbr_fd.c \
 				$(FT_PRINTF_DIR)/ft_printf.c \
-				$(FT_PRINTF_DIR)/ft_printers.c
+				$(FT_PRINTF_DIR)/ft_printers.c \
+				$(STDIO_DIR)/get_next_line.c
 
 STDLIB_SRCS	:=	$(STDLIB_DIR)/ft_calloc.c \
 				$(STDLIB_DIR)/ft_atoi.c
