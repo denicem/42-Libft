@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/12/17 18:01:07 by dmontema         ###   ########.fr        #
+#    Updated: 2021/12/17 18:38:16 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ STDIO_DIR	:=	$(SRC_DIR)/stdio
 STDLIB_DIR	:=	$(SRC_DIR)/stdlib
 STRING_DIR	:=	$(SRC_DIR)/string
 LIST_DIR	:=	$(SRC_DIR)/list
+FT_PRINTF_DIR	:= $(STDIO_DIR)/ft_printf
 
 CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 				$(CTYPE_DIR)/ft_isdigit.c \
@@ -34,7 +35,9 @@ CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 STDIO_SRCS	:=	$(STDIO_DIR)/ft_putchar_fd.c \
 				$(STDIO_DIR)/ft_putstr_fd.c \
 				$(STDIO_DIR)/ft_putendl_fd.c \
-				$(STDIO_DIR)/ft_putnbr_fd.c 
+				$(STDIO_DIR)/ft_putnbr_fd.c \
+				$(FT_PRINTF_DIR)/ft_printf.c \
+				$(FT_PRINTF_DIR)/ft_printers.c
 
 STDLIB_SRCS	:=	$(STDLIB_DIR)/ft_calloc.c \
 				$(STDLIB_DIR)/ft_atoi.c

@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stdio.h                                            :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 22:13:45 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/17 18:20:32 by dmontema         ###   ########.fr       */
+/*   Created: 2021/10/27 02:35:30 by dmontema          #+#    #+#             */
+/*   Updated: 2021/12/17 18:45:12 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STDIO_H
-# define	STDIO_H
+#ifndef FT_PRINTF_H
+# define	FT_PRINTF_H
 
-// stdio TODO: add ft_printf, gnl and add the normal put funcs (e.g putchar, ...)
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int		ft_printf(const char *format, ...);
+int		ft_putchar_pf(char c);
+int		ft_putstr_pf(char *str);
+int		ft_putnbr_pf(int nbr, int flag);
+int		ft_putnbr_base_pf(unsigned long nbr, char *set, unsigned int base, int f);
+int		ft_putaddr_pf(void *addr);
 
-# include "ft_printf.h"
+enum	e_flag {
+	noflag,
+	space,
+	plus,
+	hash
+};
 
 #	endif
