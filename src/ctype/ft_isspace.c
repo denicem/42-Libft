@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 17:45:52 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 17:50:22 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:47:41 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/ctype.h"
+#include "../../inc/libft.h"
 
 int	ft_isspace(int c)
 {

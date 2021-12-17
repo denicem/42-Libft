@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:16:10 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 20:07:33 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:44:42 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/string.h"
+#include "../../inc/libft.h"
 
 static int	freeMem(char **arr, int pos)
 {

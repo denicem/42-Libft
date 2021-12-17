@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 17:00:32 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 20:07:33 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:44:42 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/string.h"
+#include "../../inc/libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

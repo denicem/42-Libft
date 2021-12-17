@@ -6,9 +6,12 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:02:31 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 20:15:57 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/17 18:06:11 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef STRING_H
+# define	STRING_H
 
 #include <string.h>
 
@@ -38,3 +41,5 @@ char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
+
+#	endif

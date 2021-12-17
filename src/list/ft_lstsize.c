@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 18:34:12 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 22:04:03 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:47:15 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

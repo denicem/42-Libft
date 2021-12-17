@@ -6,14 +6,14 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2021/12/04 22:19:33 by dmontema         ###   ########.fr        #
+#    Updated: 2021/12/17 18:01:07 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
-HEADERFILES	=	./libft.h
+HEADERFILES	=	./inc/libft.h
 
-SRC_DIR		:=	src
+SRC_DIR		:=	./src
 CTYPE_DIR	:=	$(SRC_DIR)/ctype
 STDIO_DIR	:=	$(SRC_DIR)/stdio
 STDLIB_DIR	:=	$(SRC_DIR)/stdlib
@@ -34,10 +34,10 @@ CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 STDIO_SRCS	:=	$(STDIO_DIR)/ft_putchar_fd.c \
 				$(STDIO_DIR)/ft_putstr_fd.c \
 				$(STDIO_DIR)/ft_putendl_fd.c \
-				$(STDIO_DIR)/ft_putnbr_fd.c \
+				$(STDIO_DIR)/ft_putnbr_fd.c 
 
 STDLIB_SRCS	:=	$(STDLIB_DIR)/ft_calloc.c \
-				$(STDLIB_DIR)/ft_atoi.c 
+				$(STDLIB_DIR)/ft_atoi.c
 
 STRING_SRCS	:=	$(STRING_DIR)/ft_memset.c \
 				$(STRING_DIR)/ft_bzero.c \
@@ -59,24 +59,25 @@ STRING_SRCS	:=	$(STRING_DIR)/ft_memset.c \
 				$(STRING_DIR)/ft_strdup.c \
 				$(STRING_DIR)/ft_striteri.c \
 				$(STRING_DIR)/ft_strmapi.c \
-				$(STRING_DIR)/ft_itoa.c 
+				$(STRING_DIR)/ft_itoa.c
 
-LIST_SRCS	=	$(LIST_DIR)/ft_lstnew.c \
+LIST_SRCS	:=	$(LIST_DIR)/ft_lstnew.c \
 				$(LIST_DIR)/ft_lstadd_front.c \
 				$(LIST_DIR)/ft_lstadd_back.c \
 				$(LIST_DIR)/ft_lstsize.c \
 				$(LIST_DIR)/ft_lstlast.c \
 				$(LIST_DIR)/ft_lstiter.c \
-				$(LIST_DIR)/ft_lstmap.c 
+				$(LIST_DIR)/ft_lstmap.c \
 				$(LIST_DIR)/ft_lstdelone.c \
-				$(LIST_DIR)/ft_lstclear.c \
+				$(LIST_DIR)/ft_lstclear.c
 
-LIBFT_SRCS	=	CTYPE_SRCS \
-				STDIO_SRCS \
-				STDLIB_SRCS \
-				STRING_SRCS \
-				LIST_SRCS
+LIBFT_SRCS	=	$(CTYPE_SRCS) \
+				$(STDIO_SRCS) \
+				$(STDLIB_SRCS) \
+				$(STRING_SRCS) \
+				$(LIST_SRCS)
 
+OBJS_DIR	:=	./obj
 LIBFT_OBJS	=	$(LIBFT_SRCS:.c=.o)
 
 CC 			=	gcc
@@ -88,11 +89,11 @@ all:	$(NAME)
 $(NAME): $(LIBFT_OBJS)
 	$(AR) $(NAME) $(LIBFT_OBJS)
 
-.c.o:	
+.c.o:	obj-dir
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-	rm -f $(LIBC_OBJS)
+	rm -f $(LIBFT_OBJS)
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 21:16:26 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 22:14:52 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:46:05 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/stdio.h"
+#include "../../inc/libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

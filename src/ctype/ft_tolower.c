@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 16:14:01 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/04 18:10:18 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:47:41 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/ctype.h"
+#include "../../inc/libft.h"
 
 int	ft_tolower(int c)
 {
