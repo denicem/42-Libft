@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 13:32:13 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/03 20:58:34 by dmontema         ###   ########.fr       */
+/*   Updated: 2021/12/19 17:49:08 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,6 +231,10 @@ int main ()
 	// printf("%d\n", ft_atoi("-99999999999999999999999999"));
 
 	//printf("%s\n", ft_strtrim("Hei442lbronn424242", "42"));
+
+	// ft_printf("HELLLO\n");
+	ft_printf("%d\n", ft_atoi("-2147483659"));
+	ft_printf("%d\n", atoi("-2147483659"));
 
 	return (0);
 }
