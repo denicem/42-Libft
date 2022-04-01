@@ -13,7 +13,8 @@
 #ifndef STRING_H
 # define	STRING_H
 
-#include <string.h>
+# include <string.h>
+# include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);

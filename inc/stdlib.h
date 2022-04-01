@@ -14,6 +14,7 @@
 # define	STDLIB_H
 
 # include <stdlib.h>
+# include <stddef.h>
 
 void	*ft_calloc(size_t count, size_t size);
 int		ft_atoi(const char *str);

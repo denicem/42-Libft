@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/libft.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <stdio.h>
 
-int main ()
+#include "inc/libft.h"
+
+int main (void)
 {
     //printf("%d\n", ft_isalnum('3'));
     //printf("%d\n", ft_isalnum('M'));
@@ -232,9 +233,9 @@ int main ()
 
 	//printf("%s\n", ft_strtrim("Hei442lbronn424242", "42"));
 
-	// ft_printf("HELLLO\n");
-	ft_printf("%d\n", ft_atoi("-2147483659"));
-	ft_printf("%d\n", atoi("-2147483659"));
+	ft_printf("HELLLO\n");
+	// ft_printf("%d\n", ft_atoi("-2147483659"));
+	// ft_printf("%d\n", atoi("-2147483659"));
 
 	return (0);
 }
