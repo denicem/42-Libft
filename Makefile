@@ -20,6 +20,7 @@ STDLIB_DIR	:=	$(SRC_DIR)/stdlib
 STRING_DIR	:=	$(SRC_DIR)/string
 LIST_DIR	:=	$(SRC_DIR)/list
 FT_PRINTF_DIR	:= $(STDIO_DIR)/ft_printf
+STRINGBLD_DIR	:= $(STRING_DIR)/stringbuilder
 
 CTYPE_SRCS	:=	$(CTYPE_DIR)/ft_isalpha.c \
 				$(CTYPE_DIR)/ft_isdigit.c \
@@ -63,7 +64,10 @@ STRING_SRCS	:=	$(STRING_DIR)/ft_memset.c \
 				$(STRING_DIR)/ft_strdup.c \
 				$(STRING_DIR)/ft_striteri.c \
 				$(STRING_DIR)/ft_strmapi.c \
-				$(STRING_DIR)/ft_itoa.c
+				$(STRING_DIR)/ft_itoa.c \
+				$(STRINGBLD_DIR)/stringbuilder.c \
+				$(STRINGBLD_DIR)/stringbuilder_append.c \
+				$(STRINGBLD_DIR)/stringbuilder_utils.c \
 
 LIST_SRCS	:=	$(LIST_DIR)/ft_lstnew.c \
 				$(LIST_DIR)/ft_lstadd_front.c \
@@ -80,6 +84,8 @@ LIBFT_SRCS	=	$(CTYPE_SRCS) \
 				$(STDLIB_SRCS) \
 				$(STRING_SRCS) \
 				$(LIST_SRCS)
+
+# LIBFT_SRCS = $(SRC_DIR)/*
 
 OBJS_DIR	:=	./obj
 LIBFT_OBJS	=	$(LIBFT_SRCS:.c=.o)

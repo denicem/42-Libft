@@ -233,9 +233,42 @@ int main (void)
 
 	//printf("%s\n", ft_strtrim("Hei442lbronn424242", "42"));
 
-	ft_printf("HELLLO\n");
+	// ft_printf("HELLLO\n");
 	// ft_printf("%d\n", ft_atoi("-2147483659"));
 	// ft_printf("%d\n", atoi("-2147483659"));
+	// char *str = ft_strdup("HELLO");
+	// for (size_t i = 0; i < ft_strlen(str); i++)
+	// 	str[i] = ft_tolower(str[i]);
+	// ft_printf("%s\n", str);
+
+	{
+		t_stringbuilder	*sb = sb_create();
+
+		sb_append_char(sb, 'H');
+		sb_append_char(sb, 'e');
+		sb_append_char(sb, 'l');
+		sb_append_char(sb, 'l');
+		sb_append_char(sb, 'o');
+		sb_append_char(sb, ' ');
+		sb_append_strn(sb, "World\n", 3);
+		sb_append_str(sb, "d ");
+		sb_append_str(sb, "World\n");
+		sb_append_int(sb, 42);
+		char *str = sb_get_str(sb);
+		printf("string: %s\n", str);
+
+		sb_clear(sb);
+		sb_append_str(sb, "World\n");
+		free(str);
+		str = sb_get_str(sb);
+		printf("string: %s\n", str);
+		sb_destroy(&sb);
+		free(str);
+		if (!sb)
+		{
+			printf("sb is NULL\n");
+		}
+	}
 
 	return (0);
 }
