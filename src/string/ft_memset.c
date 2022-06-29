@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 17:22:04 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/17 17:44:42 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/06/29 23:00:18 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*str;
-	unsigned char	val;
+	size_t	i;
 
-	str = b;
-	val = c;
-	while (len)
+	i = 0;
+	while (i < len)
 	{
-		*str = val;
-		str++;
-		len--;
+		((unsigned char *) b)[i] = c;
+		i++;
 	}
 	return (b);
 }

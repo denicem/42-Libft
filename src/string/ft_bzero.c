@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:58:35 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/17 17:44:42 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/06/29 23:02:43 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 void	ft_bzero(void *s, size_t len)
 {
-	if (len)
-		ft_memset(s, 0, len);
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		((unsigned char *) s)[i] = 0;
+		i++;
+	}
 }
