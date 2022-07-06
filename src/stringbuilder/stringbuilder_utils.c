@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 19:16:41 by dmontema          #+#    #+#             */
-/*   Updated: 2022/03/27 16:40:51 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:26:23 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/libft.h"
+#include "../../inc/libft.h"
 
 void	sb_copy_oldstr(t_stringbuilder *sb, char **newstr)
 {

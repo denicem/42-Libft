@@ -6,11 +6,11 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:19:25 by dmontema          #+#    #+#             */
-/*   Updated: 2022/06/28 19:19:25 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:26:19 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/libft.h"
+#include "../../inc/libft.h"
 
 int	sb_append_char(t_stringbuilder *sb, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:13:45 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/17 19:24:03 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:27:33 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-# include "ft_printf.h"
-# include "get_next_line.h"
 
 #	endif
