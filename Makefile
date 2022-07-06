@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2022/07/06 19:29:15 by dmontema         ###   ########.fr        #
+#    Updated: 2022/07/06 19:41:45 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,11 +54,10 @@ STRING_SRCS	:=	ft_memset.c \
 				ft_strdup.c \
 				ft_striteri.c \
 				ft_strmapi.c \
-				ft_itoa.c
-
-STRBUILDER_SRCS :=	stringbuilder.c \
-					stringbuilder_append.c \
-					stringbuilder_utils.c
+				ft_itoa.c \
+				stringbuilder.c \
+				stringbuilder_append.c \
+				stringbuilder_utils.c
 
 LIST_SRCS	:=	ft_lstnew.c \
 				ft_lstadd_front.c \
