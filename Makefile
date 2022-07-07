@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2022/07/07 22:42:01 by dmontema         ###   ########.fr        #
+#    Updated: 2022/07/08 00:06:53 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,24 +108,25 @@ RESET	= \033[0m
 all: $(NAME)
 
 $(NAME): $(LIBFT_OBJS)
-	@printf "$(BLUE)Linking objects to a library file. "
+	@printf "$(BLUE)Linking objects to a library file.\r"
 	@$(AR) $(NAME) $(LIBFT_OBJS)
-	@echo "$(GREEN)[✓]$(RESET)"
+	@printf "\e[50C$(GREEN)[✓]\n$(RESET)"
+	@echo "\t\t$(GREEN)$(BOLD)COMPLETE!$(RESET)\n"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | prep
 	@printf "$(BLUE)$(BOLD)\rCompiling: $(CYAN)$(notdir $<)\r"
 	@$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
-	@printf "\e[35C$(GREEN)[✓]\n$(RESET)"
+	@printf "\e[50C$(GREEN)[✓]\n$(RESET)"
 
 clean:
-	@printf "$(YELLOW)Removing object files...\r$(RESET)"
+	@printf "$(MAGENTA)Removing object files...\r$(RESET)"
 	@rm -rf $(LIBFT_OBJS) $(OBJ_DIR)
-	@printf "$(BOLD)$(GREEN)\e[35C[✓]\n$(RESET)"
+	@printf "$(BOLD)$(GREEN)\e[50C[✓]\n$(RESET)"
 
 fclean: clean
-	@printf "$(YELLOW)Removing library file...\r$(RESET)"
+	@printf "$(MAGENTA)Removing library file...\r$(RESET)"
 	@rm -f $(NAME)
-	@printf "$(BOLD)$(GREEN)\e[35C[✓]\n$(RESET)"
+	@printf "$(BOLD)$(GREEN)\e[50C[✓]\n$(RESET)\n"
 
 re: fclean all
 
