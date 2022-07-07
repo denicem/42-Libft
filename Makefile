@@ -6,7 +6,7 @@
 #    By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 16:06:18 by dmontema          #+#    #+#              #
-#    Updated: 2022/07/07 22:14:22 by dmontema         ###   ########.fr        #
+#    Updated: 2022/07/07 22:42:01 by dmontema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,7 +124,7 @@ clean:
 
 fclean: clean
 	@printf "$(YELLOW)Removing library file...\r$(RESET)"
-	@rm -rf $(LIBFT_OBJS) $(OBJ_DIR)
+	@rm -f $(NAME)
 	@printf "$(BOLD)$(GREEN)\e[35C[✓]\n$(RESET)"
 
 re: fclean all
