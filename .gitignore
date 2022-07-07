@@ -1,4 +1,6 @@
+*.a
 *.o
+*.d
 *.txt
 main.c
 .vscode
