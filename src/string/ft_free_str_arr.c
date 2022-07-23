@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:19:16 by dmontema          #+#    #+#             */
-/*   Updated: 2022/07/23 15:21:06 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:38:17 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_free_str_arr(char ***str_arr)
 	int	i;
 
 	i = 0;
-	while (*(str_arr[i]))
+	while ((*str_arr)[i])
 	{
-		free(*(str_arr[i]));
+		free((*str_arr)[i]);
 		i++;
 	}
 	free(*str_arr);
