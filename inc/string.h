@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:02:31 by dmontema          #+#    #+#             */
-/*   Updated: 2022/07/23 14:01:51 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:21:58 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 ** -----------------------------------------------------------------------------
 ** additional string functions, that are not part of the original <string.h>
 */
+char	*ft_calloc_str(size_t count);
+char	**ft_calloc_str_arr(size_t count);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -44,5 +46,7 @@ char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
+int		ft_free_str_arr(char ***str_arr);
+int		ft_strcmp(const char *s1, const char *s2);
 
 #	endif
