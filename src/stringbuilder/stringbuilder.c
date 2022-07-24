@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:53:02 by dmontema          #+#    #+#             */
-/*   Updated: 2022/07/06 19:26:27 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:27:18 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	sb_clear(t_stringbuilder *sb)
 	if (!sb->str)
 	{
 		free(sb);
-		return (FAILURE);
+		return (FAILURE_SB);
 	}
-	return (SUCCESS);
+	return (SUCCESS_SB);
 }
 
 int	sb_destroy(t_stringbuilder **sb)
@@ -49,5 +49,5 @@ int	sb_destroy(t_stringbuilder **sb)
 	(*sb)->len = 0;
 	free(*sb);
 	*sb = NULL;
-	return (SUCCESS);
+	return (SUCCESS_SB);
 }

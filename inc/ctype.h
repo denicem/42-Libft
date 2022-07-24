@@ -6,12 +6,12 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 17:14:21 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/17 18:04:29 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:21:32 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CTYPE_H
-# define	CTYPE_H
+# define CTYPE_H
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);

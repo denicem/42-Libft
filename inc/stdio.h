@@ -6,14 +6,13 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:13:45 by dmontema          #+#    #+#             */
-/*   Updated: 2022/07/06 19:27:33 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:22:41 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STDIO_H
-# define	STDIO_H
+# define STDIO_H
 
-// stdio TODO: add ft_printf, gnl and add the normal put funcs (e.g putchar, ...)
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);

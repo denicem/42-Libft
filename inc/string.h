@@ -6,12 +6,12 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:02:31 by dmontema          #+#    #+#             */
-/*   Updated: 2022/07/23 15:21:58 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:25:17 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRING_H
-# define	STRING_H
+# define STRING_H
 
 # include <string.h>
 # include <stdlib.h>

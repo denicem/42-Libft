@@ -6,12 +6,12 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 20:22:36 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/17 19:23:18 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:22:16 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
-# define	GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 char	*get_next_line(int fd);
 int		prepareVars(int fd, char **storage, char **readbuf, char **res);

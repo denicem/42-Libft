@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:19:25 by dmontema          #+#    #+#             */
-/*   Updated: 2022/07/06 19:26:19 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:27:18 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ int	sb_append_char(t_stringbuilder *sb, char c)
 	char	*newstr;
 
 	if (!c)
-		return (FAILURE);
+		return (FAILURE_SB);
 	newstr = ft_calloc(sb->len + 2, sizeof(char));
 	if (!newstr)
-		return (FAILURE);
+		return (FAILURE_SB);
 	sb_copy_oldstr(sb, &newstr);
 	newstr[(sb->len)++] = c;
 	tmp = sb->str;
 	sb->str = newstr;
 	free(tmp);
-	return (SUCCESS);
+	return (SUCCESS_SB);
 }
 
 int	sb_append_str(t_stringbuilder *sb, char *str)
@@ -37,10 +37,10 @@ int	sb_append_str(t_stringbuilder *sb, char *str)
 	char	*newstr;
 
 	if (!str)
-		return (FAILURE);
+		return (FAILURE_SB);
 	newstr = ft_calloc(sb->len + ft_strlen(str) + 1, sizeof(char));
 	if (!newstr)
-		return (FAILURE);
+		return (FAILURE_SB);
 	sb_copy_oldstr(sb, &newstr);
 	i = 0;
 	while (str[i])
@@ -52,7 +52,7 @@ int	sb_append_str(t_stringbuilder *sb, char *str)
 	tmp = sb->str;
 	sb->str = newstr;
 	free(tmp);
-	return (SUCCESS);
+	return (SUCCESS_SB);
 }
 
 int	sb_append_strn(t_stringbuilder *sb, char *str, int len)
@@ -62,10 +62,10 @@ int	sb_append_strn(t_stringbuilder *sb, char *str, int len)
 	char	*newstr;
 
 	if (!str)
-		return (FAILURE);
+		return (FAILURE_SB);
 	newstr = ft_calloc(sb->len + len + 1, sizeof(char));
 	if (!newstr)
-		return (FAILURE);
+		return (FAILURE_SB);
 	sb_copy_oldstr(sb, &newstr);
 	i = 0;
 	while (str[i] && i < len)
@@ -77,7 +77,7 @@ int	sb_append_strn(t_stringbuilder *sb, char *str, int len)
 	tmp = sb->str;
 	sb->str = newstr;
 	free(tmp);
-	return (SUCCESS);
+	return (SUCCESS_SB);
 }
 
 int	sb_append_int(t_stringbuilder *sb, int nbr)
@@ -86,14 +86,14 @@ int	sb_append_int(t_stringbuilder *sb, int nbr)
 
 	nbr_str = ft_itoa(nbr); //handle nbr over INT_MAX
 	if (!nbr_str)
-		return (FAILURE);
+		return (FAILURE_SB);
 	if (sb_append_str(sb, nbr_str))
 	{
 		free(nbr_str);
 		nbr_str = NULL;
-		return (FAILURE);
+		return (FAILURE_SB);
 	}
 	free(nbr_str);
 	nbr_str = NULL;
-	return (SUCCESS);
+	return (SUCCESS_SB);
 }

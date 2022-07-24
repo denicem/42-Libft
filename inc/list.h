@@ -6,12 +6,12 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 21:41:53 by dmontema          #+#    #+#             */
-/*   Updated: 2021/12/17 18:06:36 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:22:26 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
-# define	LIST_H
+# define LIST_H
 
 typedef struct s_list
 {

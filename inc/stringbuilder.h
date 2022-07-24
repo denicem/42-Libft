@@ -6,7 +6,7 @@
 /*   By: dmontema <dmontema@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:47:05 by dmontema          #+#    #+#             */
-/*   Updated: 2022/03/27 16:30:00 by dmontema         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:27:57 by dmontema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdio.h>
 # include <string.h>
 
-#define SUCCESS 0
-#define FAILURE 1
+# define SUCCESS_SB 0
+# define FAILURE_SB 1
 
 typedef struct s_stringbuilder
 {
@@ -38,4 +38,4 @@ int				sb_append_strn(t_stringbuilder *sb, char *str, int len);
 int				sb_append_int(t_stringbuilder *sb, int nbr);
 char			*sb_get_str(t_stringbuilder *sb);
 
-# endif
+#	endif
